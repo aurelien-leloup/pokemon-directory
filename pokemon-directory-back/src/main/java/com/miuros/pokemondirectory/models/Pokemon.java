@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class Pokemon {
     private String name;
-    private double weight;
-    private double height;
+    private int weight;
+    private int height;
 }
