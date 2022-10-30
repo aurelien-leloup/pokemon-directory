@@ -18,10 +18,10 @@ public class PokeApiClient {
                 .getBody();
     }
 
-    public static Pokemon getPokemonByName(String name) {
+    public static PokeApiPokemon getPokemonByName(String name) {
         return Unirest.get(URL + name)
                 .header("accept", "application/json")
-                .asObject(Pokemon.class)
+                .asObject(PokeApiPokemon.class)
                 .getBody();
     }
 }

@@ -1,1 +1,21 @@
-<p>filter works!</p>
+<div class="filter-container">
+  <h2>Filters</h2>
+  <form [formGroup]="filterForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Pokemon name</mat-label>
+      <input matInput placeholder="Ex : mewtwo" formControlName="name">
+    </mat-form-field>
+    <div class="slider-container">
+      <span class="slider-label">Height (m)</span>
+      <ngx-slider [options]="heightSliderOptions" formControlName="height">
+      </ngx-slider>
+    </div>
+    <div class="slider-container">
+      <span class="slider-label">Weight (kg)</span>
+      <ngx-slider [options]="weightSliderOptions" formControlName="weight">
+      </ngx-slider>
+    </div>
+  </form>
+</div>
+
+

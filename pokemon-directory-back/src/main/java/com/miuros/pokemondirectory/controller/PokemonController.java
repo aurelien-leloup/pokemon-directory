@@ -11,12 +11,21 @@ import java.util.List;
 @RestController
 @RequestMapping("/pokemon")
 public class PokemonController {
+
     @Autowired
     PokemonService pokemonService;
 
     @GetMapping
     @ResponseBody
-    public List<Pokemon> getPokemons(@RequestBody Filter filter) {
+    @CrossOrigin
+    public List<Pokemon> getPokemons(
+            @RequestParam String name,
+            @RequestParam int maxHeight,
+            @RequestParam int maxWeight,
+            @RequestParam int minHeight,
+            @RequestParam int minWeight
+    ) {
+        final Filter filter = new Filter(name, minHeight, minWeight, maxWeight, maxHeight);
         return pokemonService.getPokemons(filter);
     }
 }

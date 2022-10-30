@@ -1,3 +1,7 @@
 <mat-toolbar>
-  <span>Pokemon directory</span>
+  <h1>Pokemon directory</h1>
+  <span>
+    {{percentSeen$ | async | percent}}
+  </span>
+
 </mat-toolbar>

@@ -10,23 +10,40 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatTableModule } from "@angular/material/table";
 import { FlexModule } from "@angular/flex-layout";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { ReactiveFormsModule } from "@angular/forms";
+import { MatInputModule } from "@angular/material/input";
+import { NgxSliderModule } from "@angular-slider/ngx-slider";
+import { HttpClientModule } from "@angular/common/http";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { StatsComponent } from './components/stats/stats.component';
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
     PokemonListComponent,
-    FilterComponent
+    FilterComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
+    MatFormFieldModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     MatTableModule,
-    FlexModule
+    FlexModule,
+    MatInputModule,
+    NgxSliderModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

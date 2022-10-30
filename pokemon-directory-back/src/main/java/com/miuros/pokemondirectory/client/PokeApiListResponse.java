@@ -6,6 +6,6 @@ import java.util.List;
 
 @Data
 public class PokeApiListResponse {
-    int number;
+    int count;
     List<PokeApiPokemonLink> results;
 }

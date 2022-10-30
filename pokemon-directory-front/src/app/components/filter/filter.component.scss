@@ -1,0 +1,29 @@
+.filter-container::ng-deep {
+  background: #2980b9;
+  position: sticky;
+  top: 64px;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 4px;
+
+  h2 {
+    color: white;
+  }
+
+
+  .ngx-slider-span, .mat-form-field {
+    color: white;
+  }
+
+  .ngx-slider-bar, .ngx-slider-pointer {
+    background: #f1c40f;
+  }
+
+  .slider-container {
+    margin-bottom: 1.5em;
+  }
+
+  .slider-label {
+    color: rgba(255, 255, 255, .7)
+  }
+}

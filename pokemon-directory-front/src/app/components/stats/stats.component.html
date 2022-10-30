@@ -1,0 +1,5 @@
+<div class="stats-container" *ngIf="pokemonService.getFilteredPokemonNumberSubject() | async as filterNumber">
+  <h2>Stats</h2>
+  <span><strong>{{filterNumber}}</strong> pokemons filtered</span><br>
+  <span><strong>{{total}}</strong> total pokemons</span>
+</div>

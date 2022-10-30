@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from "rxjs";
 import { Filter } from "../models/filter";
+import { AppSettings } from "../app-settings";
 
 @Injectable({
   providedIn: 'root'
@@ -10,16 +11,14 @@ export class FilterService {
   private filterSubject: BehaviorSubject<Filter>;
 
   constructor() {
-    this.filterSubject = new BehaviorSubject<Filter>({
-      name: '',
-      minHeight: 0,
-      minWeight: 0,
-      maxHeight: 100,
-      maxWeight: 1000
-    })
+    this.filterSubject = new BehaviorSubject<Filter>({...AppSettings.DEFAULT_FILTER})
   }
 
   getFilter(): Observable<Filter> {
     return this.filterSubject.asObservable();
+  }
+
+  setFilter(filter: Filter) {
+    this.filterSubject.next(filter);
   }
 }
